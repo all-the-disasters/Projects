@@ -1,19 +1,93 @@
-!#python3
-"""My solutions to projects from https://github.com/karan/Projects#text"""
+#!python3
+"""My solutions to projects from
+https://github.com/karan/Projects#text"""
+
+import time
 
 
 def fizz_buzz():
-    t = [i for i in range 100 if i % 5 != 0 & i % 3 != 0 elif i % 15 == 0 i = "fizzbuzz" elif i % 5 == 0 i = "buzz" else i = "fizz"]
-    print(result for result in t)
+    """Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead
+    of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five
+    print “FizzBuzz”."""
+    t = []
+    for i in range(1, 101):
+        if i % 15 == 0: t.append("fizzbuzz")
+        elif i % 5 == 0: t.append("buzz")
+        elif i % 3 == 0: t.append("fizz")
+        else: t.append(str(i))
+    print(" ".join(t))
 
 
-def reverse_text(text):
-    return "".split(text).join("")
+def reverse_text(text="5G TEST MOCY SZCZECIN"):
+    """Enter a string and the program will reverse it and print it out."""
+    test = input("Enter text that you want to reverse:\n")
+    if test != "":
+        text = test
+    lext = [l for l in text]
+    lext.reverse()
+    print("".join(lext))
+
+
+def count_vowels():
+    """Enter a string and the program counts the number of vowels in the text. For added complexity have it report a sum
+    of each vowel found."""
+    pass
+
+
+def check_if_palindrome():
+    """Checks if the string entered by the user is a palindrome. That is that it reads the same forwards as
+    backwards."""
+    pass
+
+
+def count_words():
+    """Counts the number of individual words in a string. For added complexity read these strings in from a text file
+    and generate a summary."""
+    pass
+
+
+def text_editor():
+    """Notepad style application that can open, edit, and save text documents. Optional: Add syntax highlighting and
+    other features."""
+    pass
+
+
+def rss_feed_creator():
+    """Given a link to RSS/Atom Feed, get all posts and display them."""
+    pass
+
+
+def quote_tracker():
+    """A program which can go out and check the current value of stocks for a list of symbols entered by the user.
+    The user can set how often the stocks are checked. For CLI, show whether the stock has moved up or down. Optional:
+    If GUI, the program can show green up and red down arrows to show which direction the stock value has moved."""
+    pass
+
+
+def guestbook():
+    """ A simple application that allows people to add comments or write journal entries. It can allow comments or not
+    and timestamps for all entries. Could also be made into a shout box. Optional: Deploy it on Google App Engine
+    or Heroku or any other PaaS (if possible, of course)."""
+    pass
+
+
+def simple_cipher():
+    """Vigenere / Vernam / Ceasar Ciphers - Functions for encrypting and decrypting data messages. Then send them to a
+    friend."""
+    pass
+
+
+def regex_query_tool():
+    """A tool that allows the user to enter a text string and then in a separate control enter a regex pattern.
+    It will run the regular expression against the source text and return any matches or flag errors
+    in the regular expression."""
+    pass
 
 
 if __name__ == '__main__':
     print("Fizz buzz result:\n")
     fizz_buzz()
-    print("/n/nReversing provided text result:")
-    reverse_text(input("Enter text to reverse and click enter."))
-    print("/n/nEnd of testing.")
+    print("\n\nReversing user text result:")
+    reverse_text()
+    time.sleep(30)
+    print("\n\nEnd of testing.")
